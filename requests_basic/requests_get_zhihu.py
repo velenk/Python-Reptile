@@ -6,7 +6,8 @@ headers = {
     App;eWebKit.537.36 (KHTML, like Gecko) \
     Chorme.52.0.2743.116 Safari.573.36'
 }
-r = requests.get('https://www.zhihu.com/explore', headers = headers)
-pattern = re.compile('explore-feed.*?question_link.*?>(.*?)</a>', re.S)
-titles = re.findall(pattern, r.text)
-print(titles)
+r = requests.get('https://www.bilibili.com/blackboard/activity-rJobLZbbQ.html?\
+spm_id_from=333.334.bili_bangumi.76', headers = headers)
+pattern = re.compile('image.*?\.jpg', )
+result = re.findall(pattern, r.text)
+print(result)
